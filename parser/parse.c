@@ -6,6 +6,17 @@ int is_digit(char c)
     return c >= 0x30 && c <= 0x39;
 }
 
+int digit(const char* string)
+{
+	return *string - '0';
+}
+
+int is_float()
+{
+	
+	
+}
+
 int parse(const char* string)
 {
 	
@@ -14,9 +25,9 @@ int parse(const char* string)
 	
     while (string[i] != '\0')
     {
-        if (is_digit(string[i]))
+        if (is_digit(string[i])
         {
-            digitcast = (INT)(string[i] - '0');
+            digitcast = (INT)(digit(string[i]));
 			printf("\nresult : %d", digitcast);
         }
         else

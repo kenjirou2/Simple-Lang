@@ -25,15 +25,33 @@ int is_float(const char* string)
     if (*string == '.')
     {
         string++;
-        if (!is_digit(*string)) { return 0; }
+        if (!is_digit(*string)) { return 1; }
 
         while (is_digit(*s))
 		{
 			string++;
 		}
         
-        return 1;
+        return 0;
     }
 
     return i;
+}
+
+int parse(const char* string)
+{
+	
+	if(is_float(string) != 0)
+	{
+		if(is_digit(string) != 0)
+		{
+			return 1;
+		}
+		
+		return 1;
+		
+	}
+	
+	return 0;
+	
 }

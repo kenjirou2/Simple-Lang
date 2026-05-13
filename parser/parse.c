@@ -2,7 +2,8 @@
 
 int is_digit(const char* string)
 {
-    return c >= '0' && c <= '9';
+	if (*string >= '0' && *string <= '9') { return 0; }
+	return 1;
 }
 
 int digit(const char* string)
@@ -45,11 +46,9 @@ int parse(const char* string)
 	{
 		if(is_digit(string) != 0)
 		{
-			return 1;
+			return 0;
 		}
-		
 		return 1;
-		
 	}
 	
 	return 0;
